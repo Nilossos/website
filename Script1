@@ -1,4 +1,25 @@
-<script>
+<body class="theme light classic">
+    <script>
+      document.body.classList.replace(
+        "adaptive",
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+      );
+    </script>
+    <div id="root"></div>
+    <script>
+      !(function () {
+        if ("PerformanceLongTaskTiming" in window) {
+          var g = (window.__tti = { e: [] });
+          g.o = new PerformanceObserver(function (l) {
+            g.e = g.e.concat(l.getEntries());
+          });
+          g.o.observe({ entryTypes: ["longtask"] });
+        }
+      })();
+    </script>
+    <script>
       (function () {
         window["__canva_public_path__"] = "https:\/\/static.canva.com\/web/";
         window["bootstrap"] = JSON.parse(
@@ -7,3 +28,54 @@
         window["cmsg"] = window["cmsg"] || { locale: "ru-RU", strings: {} };
       })();
     </script>
+    <script src="https://static.canva.com/static/lib/sentry/6.7.1.min.js"></script>
+    <script type="application/javascript">
+      Sentry.init({
+        dsn: "https:\u002F\u002F944d224d45b943ba9f96396432dfd868@sentry.io\u002F1767683",
+        release: "release-20220419-00-prod-b8d0ef0",
+        environment: "prod",
+        autoSessionTracking: true,
+      });
+    </script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/6cdef89873dd2362.strings.js"
+      integrity="sha512-IN7xLaDaNxyJF4Y3qq4MShDA1+q7M9J/ftKQnA6X5LQwLGxWBskyniJ3RdFzhiRTCyGpbW9DYasb2Y+61anAFA=="
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/3d3ebd2ddcd02cbd.ru-RU.js"
+      integrity="sha512-luROGUFxu9Ku2D8nlW846INdOVskQ7vLDQJo6Gs5DO69NYvvqV7Hm4Ez8xsXc855rPsR4u8p8/N+F4Kad+Misw=="
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/5598ab199661e885.runtime.js"
+      defer
+      integrity="sha512-tLiCjA04+5qHNW8FDAkjON0p4CPtlzOdXLD1Cz9LAaDlOv9bUNHsCGaoPLY9+yTbylecGBNWGOGGlZp05/tlsQ=="
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/ecbea5ed1775d7da.vendor.js"
+      defer
+      integrity="sha512-3/Qa583AlzVqQlBlYTtK6i26RrQWIJjh0pvBTs9xPiF79cagtRaaOf9SMP2QlhgJEUGomBfLHLTXzi0DGM7mUg=="
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/20b79bf70bacc9c1.vendor.js"
+      defer
+      integrity="sha512-GgEawtOfDWW4joANTmiSdd+2bdgeTqRkLY8GoXmmdxOcvvSkE9LvNqvf91ZM28SeqaA3kAjp9cHL64T/vi/puw=="
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://static.canva.com/web/49efac5571f2f31a.js"
+      defer
+      integrity="sha512-jeurmYiHNSuG1JZ2AomBXyQcUdyXQBqRaFHSTXSGdQL4Pfto6KIdLTl68SFVM+A3BcVhWqUv3xCSxMI1yNcpHA=="
+    ></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+      integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+      data-cf-beacon='{"rayId":"6feba04a1cf53a7d","token":"ef88e2b2e2894e859fa7553dc8d0441c","version":"2021.12.0","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
